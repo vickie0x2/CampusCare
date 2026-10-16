@@ -1,0 +1,211 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f6fc;
+    color: #20213a;
+    line-height: 1.6;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #ffffff;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar h2 {
+    font-size: 27px;
+    color: #242444;
+}
+
+.navbar h2 span,
+.hero h1 span {
+    color: #7661e8;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #45455c;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #7661e8;
+}
+
+.hero {
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg, #222344, #5545a9);
+}
+
+.tag {
+    color: #c9c2ff;
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #b7aaff;
+}
+
+.hero > p:not(.tag) {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    color: #e3e2f5;
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    border-radius: 9px;
+    background: #7661e8;
+    color: white;
+    padding: 13px 22px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: #5c49ca;
+    transform: translateY(-2px);
+}
+
+.section {
+    width: min(650px, 90%);
+    margin: 55px auto;
+    padding: 32px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 35px rgba(35, 34, 75, 0.07);
+}
+
+.section h2 {
+    font-size: 27px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #77778c;
+    margin-bottom: 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #dddded;
+    border-radius: 8px;
+    background: #fcfcff;
+    color: #25253e;
+    font: inherit;
+    outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #7661e8;
+    box-shadow: 0 0 0 3px rgba(118, 97, 232, 0.12);
+}
+
+textarea {
+    resize: vertical;
+}
+
+form .btn {
+    margin-top: 15px;
+}
+
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background: #efedff;
+    color: #38306f;
+    overflow-wrap: anywhere;
+}
+
+.track-section {
+    margin-top: 40px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px 15px;
+    background: #222344;
+    color: #d6d5e9;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 70px 18px;
+    }
+
+    .section {
+        padding: 22px;
+        margin: 30px auto;
+    }
+}

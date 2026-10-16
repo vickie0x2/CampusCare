@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusCare | Campus Complaint System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <h2>Campus<span>Care</span></h2>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#complaint">Submit Complaint</a>
+            <a href="#track">Track Complaint</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <p class="tag">YOUR CAMPUS, YOUR VOICE</p>
+            <h1>Make Your Campus<br>Better With <span>CampusCare</span></h1>
+            <p>Report campus problems easily and help make your college a better place.</p>
+            <a class="btn" href="#complaint">Submit a Complaint</a>
+        </section>
+
+        <section class="section" id="complaint">
+            <h2>Submit a Complaint</h2>
+            <p class="subtitle">Tell us about the issue you are facing.</p>
+
+            <form id="complaintForm">
+                <label for="studentName">Your Name</label>
+                <input id="studentName" type="text" placeholder="Enter your name" required>
+
+                <label for="studentEmail">College Email</label>
+                <input id="studentEmail" type="email" placeholder="Enter your email" required>
+
+                <label for="category">Complaint Category</label>
+                <select id="category" required>
+                    <option value="">Select category</option>
+                    <option>Electricity</option>
+                    <option>Cleanliness</option>
+                    <option>Water Supply</option>
+                    <option>Classroom</option>
+                    <option>Hostel</option>
+                    <option>Internet / Wi-Fi</option>
+                    <option>Other</option>
+                </select>
+
+                <label for="location">Location</label>
+                <input id="location" type="text" placeholder="e.g. Block A, Room 101" required>
+
+                <label for="description">Complaint Description</label>
+                <textarea id="description" rows="4" placeholder="Describe the problem..." required></textarea>
+
+                <button class="btn" type="submit">Submit Complaint</button>
+            </form>
+
+            <div id="result" class="result" hidden></div>
+        </section>
+
+        <section class="section track-section" id="track">
+            <h2>Track Your Complaint</h2>
+            <p class="subtitle">Enter your complaint ID to check its current status.</p>
+
+            <form id="trackForm">
+                <label for="complaintId">Complaint ID</label>
+                <input id="complaintId" type="text" placeholder="e.g. CC-123456" required>
+                <button class="btn" type="submit">Track Status</button>
+            </form>
+
+            <div id="trackResult" class="result" hidden></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 CampusCare | Campus Complaint Management System</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

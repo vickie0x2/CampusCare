@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusCare | Admin Login</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="login-container" id="loginSection">
+        <div class="login-card">
+            <h1>CampusCare</h1>
+            <p class="subtitle">Campus Complaint Management</p>
+
+            <h2>Admin Login</h2>
+
+
+<form id="loginForm">
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input
+            id="username"
+            name="username"
+            type="text"
+            placeholder="Enter admin username"
+            required
+        >
+    </div>
+
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input
+            id="password"
+            name="password"
+            type="password"
+            placeholder="Enter admin password"
+            required
+        >
+    </div>
+
+    <button type="submit">Login to Dashboard</button>
+    <p id="loginMessage" role="alert"></p>
+</form>
+
+            <a href="/">← Back to Student Portal</a>
+        </div>
+    </div>
+
+    <main id="dashboardSection" hidden>
+        <header class="topbar">
+            <div>
+                <h1>CampusCare Admin</h1>
+                <p>Campus Complaint Management Dashboard</p>
+            </div>
+            <button id="logoutButton" type="button">Logout</button>
+        </header>
+
+        <section class="stats">
+            <article class="stat-card">
+                <p>Total Complaints</p>
+                <h2 id="totalCount">0</h2>
+            </article>
+            <article class="stat-card">
+                <p>Submitted</p>
+                <h2 id="submittedCount">0</h2>
+            </article>
+            <article class="stat-card">
+                <p>In Progress</p>
+                <h2 id="progressCount">0</h2>
+            </article>
+            <article class="stat-card">
+                <p>Resolved</p>
+                <h2 id="resolvedCount">0</h2>
+            </article>
+        </section>
+
+        <section class="complaints-panel">
+            <h2>Manage Complaints</h2>
+
+            <div class="filters">
+                <input id="searchInput" type="search"
+                       placeholder="Search complaints...">
+
+                <select id="statusFilter">
+                    <option value="">All Statuses</option>
+                    <option value="Submitted">Submitted</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Resolved">Resolved</option>
+                </select>
+
+                <button id="refreshButton" type="button">Refresh</button>
+            </div>
+
+            <p id="dashboardMessage" role="status"></p>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Complaint ID</th>
+                            <th>Student</th>
+                            <th>Email</th>
+                            <th>Category</th>
+                            <th>Description</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Update</th>
+                        </tr>
+                    </thead>
+                    <tbody id="complaintsTableBody">
+                        <tr>
+                            <td colspan="8">Login to load complaints.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="admin.js"></script>
+</body>
+</html>
